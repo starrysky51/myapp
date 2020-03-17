@@ -26,6 +26,8 @@ export default {
       axios.get('http://localhost:3000/items')
       .then(res => {
         this.items = res.data.items
+        console.log('test')
+        // console.dir(res.data.items)
       })
       .catch(err => {
         console.error(err)
