@@ -1,10 +1,17 @@
 <template>
-  <div>
-  <button @click="getItems">getItems</button>
-  <div>
-    {{ items }}
-  </div>
-  </div>
+  <v-app>
+    <v-content>
+      <v-container>
+
+        <v-card>
+          <v-toolbar-title>items</v-toolbar-title>
+          <button @click="getItems">getItems</button>
+          {{ items }}
+        </v-card>
+
+      </v-container>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
