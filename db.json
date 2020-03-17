@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+        "media_code": "m1",
+        "name": "n1",
+        "corps": [
+          { "name": "cn1-1" },
+          { "name": "cn1-2" }
+        ]
+    },
+    {
+      "media_code": "m2",
+      "name": "n2",
+      "corps": [
+        { "name": "cn2-1" },
+        { "name": "cn2-2" },
+        { "name": "cn2-3" }
+      ]
+    },
+    {
+      "media_code": "m3",
+      "name": "n3",
+      "corps": [
+        { "name": "cn3-1" }
+      ]
+    }
+  ]
+}

@@ -1,28 +1,38 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+  <button @click="getItems">getItems</button>
+  <div>
+    {{ items }}
+  </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import axios from 'axios'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+
+  data () {
+    return {
+      items: null
+    }
+  },
+
+  mounted: function() {
+    this.getItems()
+  },
+
+  methods: {
+    getItems: function () {
+      const url = 'http://localhost:3000/items'
+      axios.get(url)
+        .then(res => {
+          this.items = res.data
+        })
+    }
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+
